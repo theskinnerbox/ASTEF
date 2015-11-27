@@ -1,0 +1,6 @@
+ASTEF Matlab requirements
+
+Matlab 2012b or newer
+
+Map Toolbox
+Image Processing Toolbox

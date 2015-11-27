@@ -1,0 +1,31 @@
+ASTEF DEVELOPER MANUAL
+Claudio Capobianco, LAFC 2013
+
+Quick Start
+-----------
+
+ - Set as present working directory astef/
+ - Run projectPaths
+ - Run replay
+
+
+Fixation Data Format
+--------------------
+See usermanual.txt
+
+Generate buttons
+----------------
+Buttons images has to be converted from original size to real button size.
+Moreover, Matlab doesn't manage png alpha directly, so during conversion
+you've to specify background color that will replace the transparance.
+
+To convert all images:
+resizeAll(90,50,style.background_color);
+
+For more information, see help resizeAll
+
+
+
+Appearance
+----------
+You can change (almost) all astef plot color and styles settings modifying values in style.m
