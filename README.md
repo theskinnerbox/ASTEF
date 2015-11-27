@@ -5,18 +5,19 @@ Francesco Di Nocera, Simon Mastrangelo, Claudio Capobianco, LAFC 2015
 Official website: http://theskinnerbox.net/astef/
 
 ## Overview
-The software application implements functions for fixation visualization and analysis.
-
+ASTEF is a tool for ocular fixations visualization and analysis. In particular, this tool computes and plots the NNI (Nearest Neighbor Index).
 ## Fixation Data Format
-Fixation file has to be a text file with .txt extension with the following formatting:
+Fixation file has to be a text file with .txt.
 
-First line: screen width and height, in pixel
+First line: screen width and height, in pixel.
+
 Second line: *"Timestamp Fix_x Fix_y"*.
+
 From third line to the end: timestamp x y
 
-You should separate data both with spaces
+Data is separated by white spaces.
 
-For example:
+Example:
 ```
 1024 1024
 Timestamp Fix_x Fix_y
