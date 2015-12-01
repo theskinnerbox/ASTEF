@@ -1,6 +1,7 @@
-ASTEF Matlab requirements
+# ASTEF II Matlab® requirements
 
-Matlab 2012b or newer
+Matlab® 2013a or later
 
-Map Toolbox
-Image Processing Toolbox
+## Toolboxes
+* Map Toolbox
+* Image Processing Toolbox
