@@ -1,6 +1,6 @@
 # ASTEF: a simple tool for examining fixations.
 
-Francesco Di Nocera<sup>1</sup>, Simon Mastrangelo<sup>2</sup>, Claudio Capobianco<sup>1</sup>, LAFC 2015
+Francesco Di Nocera<sup>1</sup>, Simon Mastrangelo<sup>2</sup>, Claudio Capobianco<sup>1</sup>, LAFC 2015.
 
 <sup>1</sup> Department of Psychology, Sapienza University of Rome, Italy
 
@@ -24,7 +24,7 @@ Data is separated by white spaces.
 
 Example:
 ```
-1024 1024
+1024 768
 Timestamp Fix_x Fix_y
 1083 369 482
 1684 388 546
@@ -40,9 +40,9 @@ Current:
 * Matlab
 
 Planned:
-* webapp
+* web app
 
-If you want to contribute to port ASTEF as a web application or in new programminglanguages, or you want improve the existing versions, please contact us!
+If you want to contribute to create the ASTEF web application, or port it in other programming languages, or improve the existing versions, please contact us!
 
 ## Publications
 * Camilli, M., Nacchia, R., Terenzi, M., & Di Nocera, F. (2008). [ASTEF: A Simple Tool for Examining Fixations.][df1] Behavior Research Methods, 40(2), 373-382.
