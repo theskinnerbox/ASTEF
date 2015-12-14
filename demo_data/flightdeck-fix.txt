@@ -1,5 +1,5 @@
 1024	768				
-ID	TimeStart	Fix_Duration	Fix_Center_x	Fix_Center_y	Log
+Timestamp Fix_x Fix_y
 1	597	714
 264	921	675
 3490	585	387
