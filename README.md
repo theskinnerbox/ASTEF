@@ -1,8 +1,9 @@
 # ASTEF: a simple tool for examining fixations.
 
-Francesco Di Nocera, Simon Mastrangelo, Claudio Capobianco, LAFC 2015
+Francesco Di Nocera<sup>1</sup>, Simon Mastrangelo<sup>2</sup>, Claudio Capobianco<sup>1</sup>, LAFC 2015
 
-Official website: http://astef.info
+<sup>1</sup> Department of Psychology, Sapienza University of Rome, Italy
+<sup>2</sup> Ergoproject Srl, Rome, Italy
 
 ## Overview
 A Simple Tool for Examining Fixations (ASTEF) is a project for facilitating the use of spatial statistics on eye tracking data. The first version of the software was developed in C# and is no longer maintained. This version is coded for Matlab. The interface has completely redesigned and simplified.
