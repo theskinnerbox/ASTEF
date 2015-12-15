@@ -1,4 +1,4 @@
-# ASTEF: a simple tool for examining fixations.
+# ASTEF: A Simple Tool for Examining Fixations.
 
 Francesco Di Nocera<sup>1</sup>, Simon Mastrangelo<sup>2</sup>, Claudio Capobianco<sup>1</sup>, LAFC 2015.
 
