@@ -42,7 +42,7 @@ Current:
 Planned:
 * web app
 
-If you want to contribute to create the ASTEF web application, or port it in other programming languages, or improve the existing versions, please contact us!
+If you want to contribute to the web application, port ASTEF in other programming languages, or improve the existing versions, please contact us!
 
 ## Publications
 * Camilli, M., Nacchia, R., Terenzi, M., & Di Nocera, F. (2008). [ASTEF: A Simple Tool for Examining Fixations.][df1] Behavior Research Methods, 40(2), 373-382.
