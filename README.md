@@ -34,7 +34,7 @@ Timestamp Fix_x Fix_y
 3576 380 433
 ```
 ## Screenshots
-[[https://github.com/theskinnerbox/ASTEF/blob/master/ASTEF-load.png|alt=astef]]
+[[https://github.com/theskinnerbox/ASTEF/blob/master/ASTEF-load.png]]
 
 ## Available programming languages
 
