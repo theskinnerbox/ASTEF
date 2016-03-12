@@ -9,7 +9,6 @@
     </head>
 
     <body>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -24,32 +23,6 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-        <script>
-            function readNewFile(event){
-                var f = event.target.files[0];
-
-                if (!f) {
-                    alert("Failed to load the file.");
-                } else if (!f.type.match('text.*')) {
-                    alert(f.name + " is not a valid text file!");
-                } else {
-                    // TODO: create json data for chart, create it
-                }
-            }
-
-            function checkFileReaderSupport(){
-                if (window.File && window.FileReader && window.FileList && window.Blob) {
-                    document.getElementById('upload').addEventListener('change', readNewFile, false);
-                } else {
-                    alert('The File APIs are not fully supported by your browser.');
-                    $('#upload').prop('disabled', true);
-                }
-            }
-
-            $(document).ready(function(){
-                checkFileReaderSupport();
-            });
-        </script>
+        <script src="app.js"></script>
     </body>
 </html>
