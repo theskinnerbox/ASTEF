@@ -6,13 +6,11 @@ Official website: http://astef.info
 A Simple Tool for Examining Fixations (ASTEF) is a project for facilitating the use of spatial statistics on eye tracking data. The first version of the software was developed in C# and it is no longer maintained. This version is coded for Matlab. The interface has completely redesigned and simplified.
 
 ## Fixation Data Format
-Fixation file has to be a text file with .txt.
+Fixation file has to be a simple text file, .txt extension, space-delimited.
 
 First line: screen width and height, in pixel.
 
 From second line to the end: timestamp x y
-
-The input file is simple text and space­delimited.
 
 Example:
 ```
