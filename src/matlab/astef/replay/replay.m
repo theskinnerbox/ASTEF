@@ -43,7 +43,7 @@ function varargout = replay(varargin)
 
 % Edit the above text to modify the response to help replay
 
-% Last Modified by GUIDE v2.5 10-Dec-2013 22:44:26
+% Last Modified by GUIDE v2.5 30-Mar-2016 12:21:12
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -167,8 +167,8 @@ set(handles.minuteIdxText,'BackgroundColor',bgColor);
 
 % Panel
 set(handles.infoPanel,'BackgroundColor',bgColor);
-handles.astefUrl = 'http://astef.info/';
-label= '<HTML><a href="www.google.com">A Simple Tool for Examinating Fixations</a>';
+handles.astefUrl = 'http://www.astef.info/';
+label= '<HTML><a href="http://www.astef.info/">http://www.astef.info/</a>';
 handles.astefButton = button.borderless(handles.astefButton);
 set(handles.astefButton, 'tooltip',handles.astefUrl,'string',label);
 
@@ -410,5 +410,3 @@ function handles = refreshFigure(handles)
 handles = refreshMinuteRange(handles);
 handles = refreshFixPlot(handles);
 handles = refreshNNIPlot(handles,handles.nniAx,handles.timeMinute);
-
-
