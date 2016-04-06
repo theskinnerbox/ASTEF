@@ -19,7 +19,6 @@ Data is separated by white spaces.
 Example:
 ```
 1024 768
-Timestamp Fix_x Fix_y
 1083 369 482
 1684 388 546
 1856 359 589
