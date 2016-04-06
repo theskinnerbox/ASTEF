@@ -10,11 +10,9 @@ Fixation file has to be a text file with .txt.
 
 First line: screen width and height, in pixel.
 
-Second line: *"Timestamp Fix_x Fix_y"*.
+From second line to the end: timestamp x y
 
-From third line to the end: timestamp x y
-
-Data is separated by white spaces.
+The input file is simple text and space­delimited.
 
 Example:
 ```
