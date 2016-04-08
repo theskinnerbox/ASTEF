@@ -10,7 +10,7 @@ Fixation file has to be a simple text file, .txt extension, space-delimited.
 
 First line: screen width and height, in pixel.
 
-From second line to the end: timestamp, and x y coordinates of each fixation
+From second line to the end: timestamp, in milliseconds, and x y coordinates of each fixation, in pixels.
 
 Example:
 ```

@@ -54,7 +54,7 @@ function isAValidFile(fileContentArray) {
         return false;
     }
 
-    var restOfTheFile = fileContentArray.slice().splice(1);
+    var restOfTheFile = fileContentArray.slice().splice(2);
 
     for(var c in restOfTheFile) {
         var currentLine = restOfTheFile[c];
@@ -91,7 +91,7 @@ function readNewFile(event){
             var fileContentArray = fileReader.result.split("\n");
 
             if(isAValidFile(fileContentArray)) {
-                var valuesFileLines = fileContentArray.slice().splice(1);
+                var valuesFileLines = fileContentArray.slice().splice(2);
 
                 populateValues(valuesFileLines);
                 buildChart();
