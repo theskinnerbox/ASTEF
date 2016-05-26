@@ -27,6 +27,11 @@ module.exports = {
                 loader: 'file'
             },
             {
+                //IMAGE LOADER
+                test: /\.(jpe?g|png|gif)$/i,
+                loader:'file?name=dist/[hash].[ext]'
+            },
+            {
                 test: /\.vue$/,
                 loader: 'vue'
             }
