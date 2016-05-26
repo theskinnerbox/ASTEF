@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>ASTEF</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <title>ASTEF Project Web Application</title>
     </head>
-
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>ASTEF Project WebReader</h1>
-                    <hr>
-
-                    <p>Choose the <strong>.txt</strong> file you want to read.</p>
-                    <p><input type="file" id="upload" class="form-control" /></p>
-
-                    <hr>
-
-                    <div id="canvas-container"></div>
-                </div>
-            </div>
-        </div>
-
-        <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="vendor/Chart.js/Chart.js"></script>
-        <script src="app.js"></script>
+        <app></app>
+        <script src="dist/bundle.js"></script>
     </body>
 </html>
