@@ -1,7 +1,14 @@
 <template>
-    <file-input></file-input>
-    <file-reset-button></file-reset-button>
-    <file-loading-spinner></file-loading-spinner>
+    <div>
+        <div class="row">
+            <file-input></file-input>
+            <file-reset-button></file-reset-button>
+        </div>
+
+        <file-loading-spinner></file-loading-spinner>
+
+        <hr />
+    </div>
 </template>
 
 <style>
@@ -35,7 +42,10 @@
                     let fileContentsAsArray = fileReader.result.split("\n");
 
                     if(fixationsFileValidator.validate(fileContentsAsArray)){
-                        // TODO: implement the rest
+                        fileContentsAsArray.pop();
+
+                        that.$broadcast('fixations-file-loaded');
+                        that.$dispatch('valid-file-loaded', fileContentsAsArray);
                     } else {
                         alert('The file you have provided has a wrong format. Please check it.');
                         that.$dispatch('reset');
