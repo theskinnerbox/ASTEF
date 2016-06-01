@@ -11,10 +11,7 @@ class FixationsDataProcessor {
         for(var c in fileContentsAsArray) {
             let lineItems = fileContentsAsArray[c].split(' ');
 
-            this.addItemToMinute({
-                x: parseInt(lineItems[1]),
-                y: parseInt(lineItems[2])
-            }, this.getMinuteFromTimestamp(parseInt(lineItems[0])));
+            this.addItemToMinute([lineItems[1], lineItems[2]], this.getMinuteFromTimestamp(parseInt(lineItems[0])));
         }
 
         return this.fixationsData;
