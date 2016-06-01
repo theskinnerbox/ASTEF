@@ -25,6 +25,7 @@
     "bootstrap": "^3.3.6",
     "convex-hull": "^1.0.3",
     "delaunay-triangulate": "^1.1.6",
+    "mathjs": "^3.2.1",
     "vue": "^1.0.24",
     "vue-strap": "^1.0.11"
   },
