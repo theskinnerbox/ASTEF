@@ -15,14 +15,14 @@ class NearestNeighborIndexProcessor {
         let nni = [];
         let d_ran = [];
 
-        nni = [nni, averageDistance/denom];
-        d_ran = [d_ran, denom];
+        nni.push(averageDistance/denom);
+        d_ran.push(denom);
 
         denom = denom + (0.0514 + 0.041 / math.sqrt(fixationPoints.length)) * (perimeter / fixationPoints.length);
 
-        nni = [nni, averageDistance/denom];
-        d_ran = [d_ran, denom];
-
+        nni.push(averageDistance/denom);
+        d_ran.push(denom);
+        
         return {
             nni: nni,
             area: area,
