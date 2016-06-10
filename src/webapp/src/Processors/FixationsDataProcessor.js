@@ -1,17 +1,26 @@
 'use strict';
 
+import NearestNeighborIndexProcessor from './NearestNeighborIndexProcessor';
+
 class FixationsDataProcessor {
 
     constructor() {
         this.fixationsData = [];
+        this.nniProcessor = new NearestNeighborIndexProcessor();
     }
 
     process(fileContentsAsArray)
     {
-        for(var c in fileContentsAsArray) {
+        fileContentsAsArray.splice(0, 1);
+
+        for(let c in fileContentsAsArray) {
             let lineItems = fileContentsAsArray[c].split(' ');
 
             this.addItemToMinute([lineItems[1], lineItems[2]], this.getMinuteFromTimestamp(parseInt(lineItems[0])));
+        }
+
+        for(let i in this.fixationsData) {
+            this.fixationsData[i]['nni'] = this.nniProcessor.calculate(this.fixationsData[i].points);
         }
 
         return this.fixationsData;
