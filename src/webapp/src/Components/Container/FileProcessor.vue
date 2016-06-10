@@ -1,12 +1,16 @@
 <template>
     <div class="row">
         <div class="col-md-7"></div>
-        <div class="col-md-5"></div>
+        <div class="col-md-5">
+            <nni-history-chart></nni-history-chart>
+        </div>
     </div>
 </template>
 
 <script>
     import FixationsDataProcessor from '../../Processors/FixationsDataProcessor'
+
+    import NNIHistoryChart from '../Presentational/NNIHistoryChart.vue'
 
     export default{
         data(){
@@ -22,9 +26,13 @@
             gatherFixationsData: function () {
                 let fixationsDataProcessor = new FixationsDataProcessor();
                 this.fixationsData = fixationsDataProcessor.process(this.fileContentsAsArray);
+
+                this.$broadcast('render-history', this.fixationsData);
             }
         },
-        components: {},
+        components: {
+            'nni-history-chart': NNIHistoryChart
+        },
         events: {
             'process': function (fileContentsAsArray) {
                 this.fileContentsAsArray = fileContentsAsArray;

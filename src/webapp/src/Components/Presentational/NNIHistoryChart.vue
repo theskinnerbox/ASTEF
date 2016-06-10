@@ -1,0 +1,96 @@
+<template>
+    <div>
+        <canvas id="nni-history-chart" width="400" height="300"></canvas>
+    </div>
+</template>
+
+<script>
+    import Chart from 'chart.js'
+
+    export default {
+        data() {
+            return {
+                chart: null
+            }
+        },
+        methods: {
+            render: function (nniValues) {
+                let minutes = [], c = 0;
+                for(let i in nniValues) {
+                    minutes.push(c);
+                    c++;
+                }
+
+                let context = document.getElementById("nni-history-chart");
+                this.chart = new Chart(context, {
+                    type: 'line',
+                    data: {
+                        labels: minutes,
+                        datasets: [{
+                            label: 'Nearest Neighbor Index',
+                            fill: true,
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(75,192,192,0.4)",
+                            borderColor: "rgba(75,192,192,1)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(75,192,192,1)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                            pointHoverBorderColor: "rgba(220,220,220,1)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 3,
+                            pointHitRadius: 10,
+                            borderWidth: 1,
+                            data: nniValues,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true,
+                                    max: 1
+                                }
+                            }],
+                            xAxes: [{
+                                ticks: {
+                                    maxRotation: 0
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                title: function (tooltipItem, data) {
+                                    let label = data.labels[tooltipItem[0].index];
+                                    return 'Minute: ' + label;
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        },
+        events: {
+            'render-history': function (fixationsData) {
+                let nniValues = [];
+                for(let c in fixationsData) {
+                    nniValues.push(fixationsData[c].nni.nni[0].toFixed(5));
+                }
+
+                this.render(nniValues);
+            },
+            'reset': function () {
+                this.chart.destroy();
+            }
+        }
+    }
+</script>
+
+<style>
+</style>
