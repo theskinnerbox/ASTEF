@@ -1,6 +1,8 @@
 <template>
     <div class="row">
-        <div class="col-md-7"></div>
+        <div class="col-md-7">
+            <per-minute-widget></per-minute-widget>
+        </div>
         <div class="col-md-5">
             <nni-history-chart></nni-history-chart>
         </div>
@@ -10,6 +12,7 @@
 <script>
     import FixationsDataProcessor from '../../Processors/FixationsDataProcessor'
 
+    import PerMinuteWidget from '../Presentational/PerMinuteWidget.vue'
     import NNIHistoryChart from '../Presentational/NNIHistoryChart.vue'
 
     export default{
@@ -27,11 +30,12 @@
                 let fixationsDataProcessor = new FixationsDataProcessor();
                 this.fixationsData = fixationsDataProcessor.process(this.fileContentsAsArray);
 
-                this.$broadcast('render-history', this.fixationsData);
+                this.$broadcast('render', this.fixationsData);
             }
         },
         components: {
-            'nni-history-chart': NNIHistoryChart
+            'nni-history-chart': NNIHistoryChart,
+            'per-minute-widget': PerMinuteWidget
         },
         events: {
             'process': function (fileContentsAsArray) {

@@ -77,7 +77,7 @@
             }
         },
         events: {
-            'render-history': function (fixationsData) {
+            'render': function (fixationsData) {
                 let nniValues = [];
                 for(let c in fixationsData) {
                     nniValues.push(fixationsData[c].nni.nni[0].toFixed(5));
