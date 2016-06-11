@@ -28,7 +28,7 @@
                         labels: minutes,
                         datasets: [{
                             label: 'Nearest Neighbor Index',
-                            fill: true,
+                            fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.4)",
                             borderColor: "rgba(75,192,192,1)",
@@ -46,7 +46,7 @@
                             pointRadius: 3,
                             pointHitRadius: 10,
                             borderWidth: 1,
-                            data: nniValues,
+                            data: nniValues
                         }]
                     },
                     options: {
