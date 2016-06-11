@@ -74,6 +74,14 @@
                         }
                     }
                 });
+
+                let that = this;
+                context.onclick = function(evt){
+                    let activePoints = that.chart.getElementsAtEvent(evt);
+                    if(activePoints[0] != undefined) {
+                        that.$dispatch('change-minute', activePoints[0]._index);
+                    }
+                };
             }
         },
         events: {

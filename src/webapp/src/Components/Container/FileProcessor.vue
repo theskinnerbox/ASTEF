@@ -41,6 +41,9 @@
             'process': function (fileContentsAsArray) {
                 this.fileContentsAsArray = fileContentsAsArray;
                 this.process();
+            },
+            'change-minute': function (minute) {
+                this.$broadcast('change-minute', minute);
             }
         }
     }

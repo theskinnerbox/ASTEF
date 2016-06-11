@@ -68,6 +68,10 @@
             'reset': function () {
                 this.showWidget = false;
                 return true;
+            },
+            'change-minute': function (minute) {
+                this.currentMinute = minute;
+                this.refreshChart();
             }
         }
     }
