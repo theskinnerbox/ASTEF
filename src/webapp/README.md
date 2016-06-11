@@ -35,7 +35,7 @@ This file will be in the following format:
 
 ```
 1024 768                // resolution
-1083 369 482         // single fixation (timestamp, x, y)
+1083 369 482            // single fixation (timestamp, x, y)
 1684 388 546
 1856 359 589
 2264 337 684
