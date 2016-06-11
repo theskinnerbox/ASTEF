@@ -51,6 +51,13 @@
                     },
                     options: {
                         responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Nearest Neighbor Index'
+                        },
+                        legend: {
+                            display: false
+                        },
                         scales: {
                             yAxes: [{
                                 ticks: {

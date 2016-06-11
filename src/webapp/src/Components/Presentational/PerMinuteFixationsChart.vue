@@ -46,6 +46,13 @@
                         }]
                     },
                     options: {
+                        title: {
+                            display: true,
+                            text: 'Per Minute Fixations'
+                        },
+                        legend: {
+                            display: false
+                        },
                         scales: {
                             xAxes: [{
                                 type: 'linear',
