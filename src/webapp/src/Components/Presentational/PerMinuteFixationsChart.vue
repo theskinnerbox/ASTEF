@@ -14,7 +14,7 @@
             }
         },
         methods: {
-            render: function (fixationPoints) {
+            render: function (fixationPoints, resolution) {
                 if(this.chart != null) {
                     this.chart.destroy();
                 }
@@ -59,14 +59,14 @@
                                 position: 'bottom',
                                 ticks: {
                                     beginAtZero: true,
-                                    max: 1024
+                                    max: resolution.width
                                 }
                             }],
                             yAxes: [{
                                 ticks: {
                                     reverse: true,
                                     beginAtZero: true,
-                                    max: 768
+                                    max: resolution.height
                                 }
                             }]
                         },
@@ -85,8 +85,8 @@
             }
         },
         events: {
-            'render-minute-chart': function (fixationPoints) {
-                this.render(fixationPoints);
+            'render-minute-chart': function (eventData) {
+                this.render(eventData.fixationPoints, eventData.resolution);
             },
             'reset': function () {
                 this.chart.destroy();

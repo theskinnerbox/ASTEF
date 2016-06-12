@@ -92,10 +92,10 @@
             }
         },
         events: {
-            'render': function (fixationsData) {
+            'render': function (eventData) {
                 let nniValues = [];
-                for(let c in fixationsData) {
-                    nniValues.push(fixationsData[c].nni.nni[0].toFixed(5));
+                for(let c in eventData.fixationsData) {
+                    nniValues.push(eventData.fixationsData[c].nni.nni[0].toFixed(5));
                 }
 
                 this.render(nniValues);

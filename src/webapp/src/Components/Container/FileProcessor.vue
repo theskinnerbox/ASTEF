@@ -28,9 +28,13 @@
             },
             gatherFixationsData: function () {
                 let fixationsDataProcessor = new FixationsDataProcessor();
+                let screenResolution = fixationsDataProcessor.getScreenResolution(this.fileContentsAsArray);
                 this.fixationsData = fixationsDataProcessor.process(this.fileContentsAsArray);
 
-                this.$broadcast('render', this.fixationsData);
+                this.$broadcast('render', {
+                    resolution: screenResolution,
+                    fixationsData: this.fixationsData
+                });
             }
         },
         components: {

@@ -29,6 +29,7 @@
     export default {
         data() {
             return {
+                chartResolution: {},
                 fixationsData: [],
 
                 currentMinute: 0,
@@ -51,16 +52,20 @@
                 this.minutesCount = this.fixationsData.length;
             },
             refreshChart() {
-                this.$broadcast('render-minute-chart', this.fixationsData[this.currentMinute].points);
+                this.$broadcast('render-minute-chart', {
+                    fixationPoints: this.fixationsData[this.currentMinute].points,
+                    resolution: this.chartResolution
+                });
             }
         },
         components: {
             'per-minute-fixations-chart': PerMinuteFixationsChart
         },
         events: {
-            'render': function (fixationsData) {
+            'render': function (eventData) {
                 this.showWidget = true;
-                this.fixationsData = fixationsData;
+                this.fixationsData = eventData.fixationsData;
+                this.chartResolution = eventData.resolution;
 
                 this.resetPaginator();
                 this.refreshChart();

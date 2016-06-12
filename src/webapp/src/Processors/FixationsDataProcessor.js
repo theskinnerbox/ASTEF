@@ -9,6 +9,17 @@ class FixationsDataProcessor {
         this.nniProcessor = new NearestNeighborIndexProcessor();
     }
 
+    getScreenResolution(fileContentsAsArray)
+    {
+        let firstLine = fileContentsAsArray[0];
+        let resolution = firstLine.split(' ');
+
+        return {
+            width: parseInt(resolution[0]),
+            height: parseInt(resolution[1])
+        }
+    }
+
     process(fileContentsAsArray)
     {
         fileContentsAsArray.splice(0, 1);
