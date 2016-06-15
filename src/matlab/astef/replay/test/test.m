@@ -20,6 +20,7 @@ for f = fnames
             importFixation(fullname);
             disp([f{1} ': test FAILED']);
         catch
+            disp([f{1} ': test PASSED']);
         end
     else
         disp([f{1} ': test file does not exists']);
