@@ -14,9 +14,25 @@
 
 %%
 function [fixationTS,screensiz] = importFixation(filename)
-%% 
-% Initialize variables.
-startRow = 3;
+
+
+%% Get screen size
+fileID = fopen(filename,'r');
+tline = fgetl(fileID);
+if tline == -1
+    fclose(fileID);
+    error('astef:inputFile','no screen size information');
+end
+screensiz = sscanf(tline,'%d %d');
+if size(screensiz,1) ~= 2 
+    fclose(fileID);
+    error('astef:inputFile',' wrong screen size information');
+end
+fclose(fileID);
+
+
+%% Initialize variables.
+startRow = 2;
 endRow = inf;
 
 %% Format string for each line of text
@@ -46,6 +62,16 @@ end
 %% Close the text file.
 fclose(fileID);
 
+if isempty(dataArray{1}) 
+    error('astef:inputFile','no fixation data');
+end
+
+if any(isnan(dataArray{1})) || any(isnan(dataArray{2})) || any(isnan(dataArray{3}))
+    error('astef:inputFile','missing data in fixation matrix');
+end
+
+
+
 %% Create timeseries
 time = dataArray{:, 1}./1000;
 
@@ -63,9 +89,6 @@ ts_pos.DataInfo.Units = 'pixels';
 fixationTS = ts_pos;
 
 
-fileID = fopen(filename,'r');
-screensiz = fscanf(fileID,'%d %d');
-fclose(fileID);
 
 end
 

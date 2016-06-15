@@ -32,6 +32,8 @@ if size(fixations,2) ~= 2
         error('nni:argChk','fixations has to be a Mx2 matrix');
 end
 
+% sfixations = unique(fixations,'rows');
+
 if strcmp(method,'convexhull') || strcmp(method,'ch')
     [perimeter,area] = compute_convexHull(fixations);
 elseif strcmp(method,'smallestrectangle') || strcmp(method,'sr')
@@ -69,16 +71,14 @@ d_nn = avgDistance;
     end
 
     function [perimeter,area] = compute_convexHull(fixations)
+        fixationsUnique = unique(fixations,'rows');
+        %M=[]; % debug
+        S=style;  % debug
         try
-            DT = delaunayTriangulation(fixations);
+            DT = delaunayTriangulation(fixationsUnique);
             [K,area] = convexHull(DT);
-            
-            perimeter = 0;
-            n = size(K,1);
-            % last point in K is equal to the first (i.e. hull is closed)
-            for i = 1:(n-1)
-                perimeter = perimeter + norm(fixations(K(i),:)-fixations(K(i+1),:));
-            end
+            fixationsUniqVertex = fixationsUnique(K,:);
+            perimeter = perim(fixationsUniqVertex);
         catch
             area = 0;
             perimeter = 0;

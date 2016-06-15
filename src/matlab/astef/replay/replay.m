@@ -269,7 +269,9 @@ if filename ~= 0
     try
     [fixationData,scrsize] = importFixation(ffname);
     catch e
-        msgbox({'Wrong file format for fixation data file.' 'See usermanual.txt for details.'}, 'Import file','error');
+        msgbox({'Wrong file format for fixation data file:' ...
+            e.message ...
+            'See usermanual.txt for details.'}, 'Import file','error');
         error('astef:importFix','Wrong file format');
     end
     fixsize = handles.fixplot_size;

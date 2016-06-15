@@ -10,6 +10,11 @@ else
     disp('OK');
 end
 
+[p,f] = fileparts(mfilename('fullpath'));
+if ~isequal(p,pwd) 
+    error('astef:workingdir',['Before starting the script ' f ', please change current folder to ' p]);
+end
+
 %%
 projectPaths;
 replay;
