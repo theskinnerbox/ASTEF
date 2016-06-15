@@ -1,6 +1,6 @@
 % Launch this script to get started
 
-%%
+%% Check matlab version
 disp('Checking MATLAB version...');
 if verLessThan('matlab','8.1')
     % -- MATLAB R2012b and earlier --
@@ -10,6 +10,7 @@ else
     disp('OK');
 end
 
+%% Check working directory
 [p,f] = fileparts(mfilename('fullpath'));
 if ~isequal(p,pwd) 
     error('astef:workingdir',['Before starting the script ' f ', please change current folder to ' p]);
