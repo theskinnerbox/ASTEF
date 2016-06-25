@@ -48,7 +48,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: 'Per Minute Fixations'
+                            text: 'Scanpath'
                         },
                         legend: {
                             display: false
