@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-6">
                 <p style="text-align: center; padding-top: 8px;">
-                    Minute: <b>{{ currentMinute }}</b>
+                    Minute: <b>{{ currentMinute + 1 }}</b>
                 </p>
             </div>
             <div class="col-md-3">

@@ -15,7 +15,7 @@
         },
         methods: {
             render: function (nniValues) {
-                let minutes = [], c = 0;
+                let minutes = [], c = 1;
                 for(let i in nniValues) {
                     minutes.push(c);
                     c++;
