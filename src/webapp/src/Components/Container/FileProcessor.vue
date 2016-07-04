@@ -4,7 +4,7 @@
             <per-minute-widget></per-minute-widget>
         </div>
         <div class="col-md-5">
-            <nni-history-chart></nni-history-chart>
+            <nni-history-widget></nni-history-widget>
         </div>
     </div>
 </template>
@@ -13,7 +13,7 @@
     import FixationsDataProcessor from '../../Processors/FixationsDataProcessor'
 
     import PerMinuteWidget from '../Presentational/PerMinuteWidget.vue'
-    import NNIHistoryChart from '../Presentational/NNIHistoryChart.vue'
+    import NNIHistoryWidget from '../Presentational/NNIHistoryWidget.vue'
 
     export default{
         data(){
@@ -38,7 +38,7 @@
             }
         },
         components: {
-            'nni-history-chart': NNIHistoryChart,
+            'nni-history-widget': NNIHistoryWidget,
             'per-minute-widget': PerMinuteWidget
         },
         events: {

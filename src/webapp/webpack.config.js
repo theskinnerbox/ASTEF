@@ -20,11 +20,11 @@ module.exports = {
             },
             {
                 test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "url?limit=10000"
+                loader: "url?limit=10000&name=dist/[hash].[ext]"
             },
             {
                 test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-                loader: 'file'
+                loader: 'file?name=dist/[hash].[ext]'
             },
             {
                 //IMAGE LOADER
