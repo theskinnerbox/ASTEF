@@ -37,9 +37,10 @@ Planned:
 If you want to contribute to the web application, porting ASTEF to other programming languages, or improving the existing versions, please contact us!
 
 ## Publications
-* Di Nocera, F., Capobianco, C., & Mastrangelo, S. (submitted). A Simple(r) Tool For Examining Fixations.
-* Camilli, M., Nacchia, R., Terenzi, M., & Di Nocera, F. (2008). [ASTEF: A Simple Tool for Examining Fixations.][df1] Behavior Research Methods, 40(2), 373-382.
-* Di Nocera, F., Camilli, M., & Terenzi, M. (2007). [A random glance at the flight deck: pilot’s scanning strategies and the real-time assessment of mental workload.][df2] Journal of Cognitive Engineering and Decision Making, 1(3), 271-285.
+* Di Nocera, F., Capobianco, C., & Mastrangelo, S. (2016). [A Simple(r) Tool For Examining Fixations.][df1] Journal of Eye Movement Research, 9(4):3:1-6
+* Camilli, M., Nacchia, R., Terenzi, M., & Di Nocera, F. (2008). [ASTEF: A Simple Tool for Examining Fixations.][df2] Behavior Research Methods, 40(2), 373-382.
+* Di Nocera, F., Camilli, M., & Terenzi, M. (2007). [A random glance at the flight deck: pilot’s scanning strategies and the real-time assessment of mental workload.][df3] Journal of Cognitive Engineering and Decision Making, 1(3), 271-285.
 
-[df1]: http://link.springer.com/content/pdf/10.3758/BRM.40.2.373.pdf
-[df2]: http://edm.sagepub.com/content/1/3/271.full.pdf
+[df1]: https://bop.unibe.ch/index.php/JEMR/article/view/2477/pdf_943
+[df2]: http://link.springer.com/content/pdf/10.3758/BRM.40.2.373.pdf
+[df3]: http://edm.sagepub.com/content/1/3/271.full.pdf
