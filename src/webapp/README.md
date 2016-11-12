@@ -22,10 +22,12 @@ To use the application on your machine, you will need:
 
 ## Installation
 
-1. `git clone` the repository;
-2. type `npm install` in this directory;
-3. open the `index.html` page (no local web server needed!);
-4. You're done!
+1. `git clone` the repository (let's assume that you have chosen `astef` as directory name);
+2. type `cd astef/src/webapp`;
+3. type `npm install` in this directory;
+4. compile assets by running `node_modules/.bin/webpack`;
+5. open the `index.html` page (no local web server needed!);
+6. You're done!
 
 ## Usage
 
