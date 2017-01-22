@@ -55,3 +55,11 @@ After the processing procedure, you will see two separate charts:
 You will be able to change the minute by clicking on the "Next" and "Previous" buttons, or on a specific minute on the NNI values chart.
 
 Have fun!
+
+## Testing
+
+We prepared some tests for the `NearestNeighborIndexProcessor`. You can run them by executing, once you've installed, everything:
+
+```bash
+$ node_modules/.bin/mocha --compilers js:babel-core/register
+```
