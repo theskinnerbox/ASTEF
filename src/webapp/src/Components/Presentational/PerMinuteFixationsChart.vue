@@ -90,6 +90,20 @@
             },
             'reset': function () {
                 this.chart.destroy();
+            },
+            'change-background': function(src) {
+                let canvas = document.getElementById('per-minute-fixations-chart');
+
+                if(src === '') {
+                    canvas.style.backgroundImage = '';
+                    return;
+                }
+
+                canvas.style.backgroundImage = 'url(\'' + src + '\')';
+                canvas.style.backgroundPositionX = '40px';
+                canvas.style.backgroundPositionY = '32px';
+                canvas.style.backgroundRepeat = 'no-repeat';
+                canvas.style.backgroundSize = 'auto ' + (canvas.height - 60) + 'px';
             }
         }
     }
