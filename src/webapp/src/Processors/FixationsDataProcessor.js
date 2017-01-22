@@ -49,7 +49,7 @@ class FixationsDataProcessor {
     }
 
     getMinuteFromTimestamp(timestamp) {
-        let minute = Math.floor(timestamp * 1.67 * 0.00001);
+        let minute = Math.floor(timestamp / 1000 / 60);
         return minute;
     }
 
