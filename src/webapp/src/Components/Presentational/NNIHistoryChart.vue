@@ -89,6 +89,29 @@
                         that.$dispatch('change-minute', activePoints[0]._index);
                     }
                 };
+
+                this.highlightMinute(0);
+            },
+            highlightMinute: function(currentMinute) {
+                if(this.chart !== null) {
+
+                    let pointBackgroundColors = [];
+                    let pointRadius = [];
+
+                    for(let c = 0; c < this.chart.data.datasets[0].data.length; c++) {
+                        if(c == currentMinute) {
+                            pointRadius.push(5);
+                            pointBackgroundColors.push('rgba(75,192,192,1)');
+                        } else {
+                            pointRadius.push(3);
+                            pointBackgroundColors.push('#FFFFFF');
+                        }
+                    }
+
+                    this.chart.data.datasets[0].pointBackgroundColor = pointBackgroundColors;
+                    this.chart.data.datasets[0].pointRadius = pointRadius;
+                    this.chart.update();
+                }
             }
         },
         events: {
@@ -102,6 +125,9 @@
             },
             'reset': function () {
                 this.chart.destroy();
+            },
+            'change-minute': function(currentMinute) {
+                this.highlightMinute(currentMinute);
             }
         }
     }

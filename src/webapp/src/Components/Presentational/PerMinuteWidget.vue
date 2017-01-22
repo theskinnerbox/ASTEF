@@ -42,14 +42,17 @@
             nextPage: function () {
                 this.currentMinute++;
                 this.refreshChart();
+                this.$dispatch('change-minute', this.currentMinute);
             },
             previousPage: function () {
                 this.currentMinute--;
                 this.refreshChart();
+                this.$dispatch('change-minute', this.currentMinute);
             },
             resetPaginator: function () {
                 this.currentMinute = 0;
                 this.minutesCount = this.fixationsData.length;
+                this.$dispatch('change-minute', this.currentMinute);
             },
             refreshChart() {
                 this.$broadcast('render-minute-chart', {
