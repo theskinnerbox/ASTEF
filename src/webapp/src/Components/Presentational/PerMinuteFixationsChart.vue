@@ -82,7 +82,19 @@
                         }
                     }
                 });
+            },
+            handleResize: function() {
+                if(this.bgImage !== '') {
+                    let canvas = document.getElementById('per-minute-fixations-chart');
+                    canvas.style.backgroundSize = 'auto ' + (canvas.height - 60) + 'px';
+                }
             }
+        },
+        ready: function () {
+            window.addEventListener('resize', this.handleResize);
+        },
+        beforeDestroy: function () {
+            window.removeEventListener('resize', this.handleResize);
         },
         events: {
             'render-minute-chart': function (eventData) {
