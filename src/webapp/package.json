@@ -1,0 +1,56 @@
+{
+  "name": "astef-webapp",
+  "version": "1.0.0",
+  "description": "The ASTEF project web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theskinnerbox/ASTEF.git"
+  },
+  "keywords": [
+    "astef",
+    "fixations",
+    "webapp"
+  ],
+  "author": "Francesco Malatesta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theskinnerbox/ASTEF/issues"
+  },
+  "homepage": "https://github.com/theskinnerbox/ASTEF#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "chart.js": "^2.1.4",
+    "d3-polygon": "^0.2.1",
+    "file-saver": "^1.3.2",
+    "mathjs": "^3.2.1",
+    "vue": "^1.0.24",
+    "vue-strap": "^1.0.11"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.2",
+    "babel-runtime": "^5.8.0",
+    "bootstrap-webpack": "0.0.5",
+    "chai": "^3.5.0",
+    "css-loader": "^0.23.0",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.8.5",
+    "imports-loader": "^0.6.5",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mocha": "^2.5.3",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.3.0",
+    "webpack": "^1.13.1"
+  }
+}
